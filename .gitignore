@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+.env
+
+*.pyc
+*.pyo
+
+.vscode/
+
+postgres_data/
+
+dist/
+build/
