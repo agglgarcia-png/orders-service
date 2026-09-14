@@ -35,8 +35,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Ruff
-        run: |
-          python -m ruff check .
+2
+run: |
+3
+python -m ruff check app tests
 
       - name: Run MyPy
         run: |
@@ -48,6 +50,4 @@ jobs:
 
       - name: Generate Coverage
         run: |
-          python -m pytest tests \
-          --cov=app \
-          --cov-report=term-missing
+          python -m pytest tests --cov=app --cov-report=term-missing
