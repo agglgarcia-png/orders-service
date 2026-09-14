@@ -1,3 +1,6 @@
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+
 from app.api.routers.health import router as health_router
 from app.api.routers.orders import router as orders_router
 from app.domain.exceptions.order_exceptions import (
@@ -6,8 +9,6 @@ from app.domain.exceptions.order_exceptions import (
     InvalidOrderStatusTransitionError,
     OrderNotFoundError,
 )
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
 
 app = FastAPI(
     title="Orders Service",

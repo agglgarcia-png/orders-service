@@ -2,10 +2,11 @@ from datetime import datetime
 from decimal import Decimal
 from uuid import UUID
 
+from pydantic import BaseModel
+
 from app.domain.value_objects.order_status import (
     OrderStatus,
 )
-from pydantic import BaseModel
 
 
 class CreateOrderRequest(BaseModel):

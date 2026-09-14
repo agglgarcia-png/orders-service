@@ -1,5 +1,7 @@
 from uuid import UUID
 
+from fastapi import APIRouter, Depends, status
+
 from app.api.dependencies import (
     get_create_order_use_case,
     get_delete_order_use_case,
@@ -23,7 +25,6 @@ from app.application.use_cases.get_order import (
 from app.application.use_cases.update_order_status import (
     UpdateOrderStatusUseCase,
 )
-from fastapi import APIRouter, Depends, status
 
 router = APIRouter(
     prefix="/orders",

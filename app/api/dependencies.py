@@ -1,3 +1,6 @@
+from fastapi import Depends
+from sqlalchemy.orm import Session
+
 from app.application.use_cases.create_order import (
     CreateOrderUseCase,
 )
@@ -16,8 +19,6 @@ from app.infrastructure.database.session import (
 from app.infrastructure.repositories.sql_order_repository import (
     SqlOrderRepository,
 )
-from fastapi import Depends
-from sqlalchemy.orm import Session
 
 
 def get_db():

@@ -3,11 +3,10 @@ name = "app"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Ana", email = "aggl_garcial@hotmail.com"}
+    { name = "Ana", email = "aggl_garcial@hotmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = [
-]
+dependencies = []
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -15,6 +14,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 88
+exclude = [
+    "src",
+]
 
 [tool.ruff.lint]
 ignore = ["B008"]
