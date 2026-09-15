@@ -57,7 +57,6 @@ msgpack==1.2.2
 mypy==2.3.1
 mypy_extensions==1.1.0
 nh3==0.3.7
-nltk==3.10.3
 numpy==2.5.2
 openpyxl==3.1.5
 -e git+https://github.com/agglgarcia-png/orders-api-Ana.git@19049271ba9d9e39ab5995349f0e9ff33602e7ef#egg=orders_api

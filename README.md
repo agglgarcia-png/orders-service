@@ -1,5 +1,23 @@
 # Orders Service
 
+![Python](https://img.shields.io/badge/Python-3.12stAPI](https://img.shields.io/badge/FastAPI-0.
+![PostgreSQL](https://img.shields.io/badge/Postgretps://img.shields.io/badge/Docker-Enabled-2496ED
+![Architecture](httpso/badge/Architecture-Hexagonal-orange
+![Coverage](httpsds.io/badge/Coverage-86%25-brightgreen
+![Tests](https://img.shields.io/bs-33_Passed-success
+https://img.shields.io/badge/Ruff-Passing-success
+https://img.shields.io/badge/MyPy-Passing-success
+![Security](https:/.io/badge/Security-No_Known_Vulnerabilities-success
+
+[![CI Pipeline](https://github.com/agglgarcia-png/orders-service/actions/workflows/ci.yml/badge.svg)](https://github.com/agglgarcia-png/orders-service/actions)
+
+API REST desarrollada con FastAPI utilizando Arquitectura Hexagonal (Clean Architecture) para la gestión de órdenes.
+
+## Objetivo
+
+El proyecto implementa un servicio de órdenes siguiendo principios de diseño limpio, separación de responsabilidades y buenas prácticas de desarrollo backend.
+# Orders Service
+
 API REST desarrollada con FastAPI utilizando Arquitectura Hexagonal (Clean Architecture) para la gestión de órdenes.
 
 ## Objetivo
