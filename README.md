@@ -45,6 +45,96 @@ El proyecto implementa un servicio de órdenes siguiendo principios de diseño l
 
 El proyecto sigue Arquitectura Hexagonal (Ports and Adapters).
 
+---
+
+# Diagrama de Arquitectura
+
+El servicio implementa Arquitectura Hexagonal (Ports and Adapters).
+
+```text
+                    ┌─────────────┐
+                    │   Cliente   │
+                    │  Swagger    │
+                    │ Postman/API │
+                    └──────┬──────┘
+                           │
+                           ▼
+                ┌──────────────────┐
+                │     FastAPI      │
+                │      API         │
+                │     Routers      │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │   Application    │
+                │    Use Cases     │
+                │                  │
+                │ Create Order     │
+                │ Get Order        │
+                │ Update Status    │
+                │ Delete Order     │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │      Domain      │
+                │                  │
+                │ Entities         │
+                │ Value Objects    │
+                │ Business Rules   │
+                └────────┬─────────┘
+                         │
+                Repository Port
+                         │
+                         ▼
+                ┌──────────────────┐
+                │ Infrastructure   │
+                │                  │
+                │ SQL Repository   │
+                │ SQLAlchemy       │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │   PostgreSQL     │
+                │    Database      │
+                └──────────────────┘
+```
+
+## Flujo de una solicitud
+
+```text
+Cliente
+   │
+   ▼
+FastAPI Endpoint
+   │
+   ▼
+Use Case
+   │
+   ▼
+Domain Rules
+   │
+   ▼
+Repository Port
+   │
+   ▼
+SQL Repository Adapter
+   │
+   ▼
+PostgreSQL
+```
+
+### Beneficios de la Arquitectura Hexagonal
+
+- Separación clara de responsabilidades.
+- Independencia de la base de datos.
+- Facilidad para realizar pruebas unitarias.
+- Menor acoplamiento entre capas.
+- Mayor mantenibilidad y escalabilidad.
+- Posibilidad de reemplazar adaptadores sin afectar el dominio.
+
 ## Capas
 
 ### API
